@@ -1,0 +1,397 @@
+
+body {
+  background: white;
+  color: black;
+  margin: 0;
+  padding: 0;
+}
+
+.main-card {
+  max-width: 400px;
+  margin: 2rem auto;
+  margin-top: 80px;
+  background: #f3f3f3;
+  border-radius: 15px;
+  padding: 20px;
+  text-align: left;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.typewriter,
+.typewriter-once {
+  font-size: 1.2rem;
+  margin: 10px 0;
+}
+
+.cursor {
+  animation: blink 1s infinite;
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 50%, 100% { opacity: 1; }
+  25%, 75% { opacity: 0; }
+}
+
+.slideshow {
+  position: relative;
+  height: 200px;
+  margin: 20px 0;
+}
+
+.slide {
+  display: none;
+  width: 100%;
+  height: 200px;
+  object-fit: contain;
+}
+
+.slide.active {
+  display: block;
+}
+
+.links a {
+  display: block;
+  margin: 5px 0;
+  color: black;
+  text-decoration: underline;
+}
+
+
+
+.grease-section {
+  padding: 2rem;
+  text-align: center;
+  justify-content: center;
+  align-item: center;
+  background: #f3f3f3;
+  color: black;
+}
+
+.opay-card {
+  margin-top: 1rem;
+}
+
+.opay-banner {
+  width: 200px;
+  margin-bottom: 0.5rem;
+}
+
+.btn-row button {
+  margin: 5px 10px;
+  padding: 5px 15px;
+  background: #00ffcc;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #111;
+  cursor: pointer;
+}
+
+
+.envelope {
+  margin: 2rem auto;
+  width: 200px;
+  height: 150px;
+  position: relative;
+}
+
+.envelope-flap {
+  width: 100%;
+  height: 100%;
+  background: #f3f3f3;
+  clip-path: polygon(0 0, 100% 0, 50% 50%);
+}
+.slide-img {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 150px;
+  transition: top 1.5s ease-in-out;
+  z-index: 2;
+}
+
+/* Slide effect when visible */
+.slide-img.visible {
+  top: 20%;
+}
+
+/* Footer */
+.footer {
+  padding: 2rem 1rem;
+  text-align: left;
+  background: linear-gradient(to right, #E9F9F6, #EDEAFD);
+  color: black;
+}
+
+.footer-top {
+  display: flex;
+  align-items: left;
+  justify-content: left;
+  gap: 8px;
+  margin-bottom: 1rem;
+}
+
+.footer-logo {
+  width: 40px;
+}
+
+.footer-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.socials a {
+  margin: 0 8px;
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.footer-links li {
+  margin: 5px 0;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #111;
+}
+
+.copyright {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: none; /* Hidden by default */
+    z-index: 99; /* Below the sidebar */
+}
+
+.menu-icon {
+  position: fixed; /* Keep it in the corner */
+  top: 20px;       /* Adjust position as needed */
+  left: 20px;
+  z-index: 101;   /* Above overlay and sidebar */
+  cursor: pointer;
+  text-align: left;
+  justify-content: left;
+  font-size: 37px;
+}
+
+
+
+
+
+
+
+.sidebar {
+    /* ... other styles ... */
+    right: -400px;  /* Initially hidden */
+    transition: right 0.3s ease; /* Smooth animation */
+    width: 300px; /* Adjust as needed */
+    position: fixed;  /* Important! */
+    top: 0;
+    height: 100%;
+    background-color: white;  /* Or your desired background */
+    z-index: 100;  /* Make sure it's on top of other elements */
+}
+
+/* Styles for the menu items */
+#sidebar nav ul li a {
+    display: block; /* Make the entire <a> area clickable */
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Or your desired text color */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #f0f0f0; /* Light grey hover color */
+}
+
+/* Basic icon styling */
+#sidebar nav ul li a i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 1.2em;
+}
+
+/* Animation Styles */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.highlighted {
+  background-color: yellow; /* Or your highlight color */
+}
+
+.vibrate {
+    animation: vibrate 0.2s linear infinite;
+}
+
+
+
+
+
+
+.close-button {
+    text-align: left;
+    padding: 10px;
+    height: 40px;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+
+
+#sidebar nav ul li a i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 1.2em;
+}
+
+
+
+
+
+
+/* Animation Styles */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.highlighted {
+  background-color: yellow; /* Or your highlight color */
+}
+
+.vibrate {
+    animation: vibrate 0.2s linear infinite;
+}
+
+/*Portfolio*/
+.portfolio {
+    animation: spin 1s linear 1; /* The "1" means it only runs once */
+}
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.scroll-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.typewriter-text {
+  font-size: 0.9rem;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid #fff;
+  width: fit-content;
+  margin: 0 auto;
+  animation: blinkCursor 0.8s step-end infinite;
+}
+
+@keyframes blinkCursor {
+  50% { border-color: transparent; }
+}
+
+
+  #preoader {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.oader {
+border: 5px solid #f3f3f3;
+  border-top: 5px solid #09f;
+  border-radius: 50%;
+  width: 50px; height: 50px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0); }
+  100% { transform: rotate(360deg); }
+}

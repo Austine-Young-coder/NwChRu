@@ -1,0 +1,516 @@
+
+* {
+  margin: 0;
+  padding: 20;
+  box-sizing: border-box;
+  font-family: sans-serif;
+  }
+
+
+body {
+    padding: 10px;
+  color: #333;
+}
+
+body.dark-mode {
+    background-color: #222;
+    color: #eee;
+}
+
+
+/* Ensure all media scale */
+img, video {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Make text more readable on small screens */
+@media (max-width: 600px) {
+    h1, h2, h3 {
+        font-size: 1.2rem;
+    }
+
+    .portfolio-item, #contact form {
+        padding: 1rem;
+    }
+}
+
+
+header .cover-photo {
+    margin-bottom: 1rem;
+}
+
+/* Sections */
+.section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .section {
+    background-color: #333;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+/* Existing Styles */
+
+#about {
+    text-align: center;
+    position: relative; /* Important for absolute positioning */
+    max-width: 100%;
+    overflow: hidden;  /* Prevent image from overflowing */
+    padding: 2rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);  /* Semi-transparent background for readability */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode #about {
+    background-color: rgba(51, 51, 51, 0.6); /* Dark mode transparent background */
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+
+/* Style the cover image to be the background */
+.cover-image {
+    position: absolute;
+    max-width: 100%;
+    height: auto; /* Position behind the content */
+    top: 0;
+    left: 0;   
+    right: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the whole area */
+    z-index: -1; /* Place it behind the content */
+    opacity: 0.4; /* Adjust opacity for better readability */
+}
+
+/* Add a wrapper div */
+.about-content {
+  position: relative;
+  z-index: 1; /* Ensure text and profile pic appear above the image */
+  padding: 20px; /* Add some padding to content */
+}
+
+
+/* Style the profile pic and info layout */
+#about .profile-pic {
+    margin-bottom: 1rem;
+}
+
+#about .profile-pic img {
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+/* Portfolio */
+#portfolio .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1rem;
+}
+
+.portfolio-item {
+    border: 1px solid #ddd;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    transition: box-shadow 0.3s;
+}
+
+
+body.dark-mode .portfolio-item {
+    border-color: #555;
+    box-shadow: 0 2px 4px rgba(255, 255, 255, 0.1);
+}
+
+.portfolio-item:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+.portfolio-item video {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    margin-bottom: 0.5rem;
+}
+
+
+/* Contact Form */
+#contact form {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    width: 100%;
+    margin: 0 auto;
+}
+
+#contact form input,
+#contact form textarea {
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Orbitron', sans-serif;
+    transition: border-color 0.3s;
+}
+
+body.dark-mode #contact form input,
+body.dark-mode #contact form textarea {
+    background-color: #444;
+    color: #fff;
+    border-color: #555;
+}
+
+#contact form input:focus,
+#contact form textarea:focus {
+    border-color: #66b3ff;
+    outline: none;
+}
+
+#contact form button {
+    padding: 0.75rem 1.5rem;
+    background-color: #333;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: 'Orbitron', sans-serif;
+}
+
+#contact form button:hover {
+    background-color: #66b3ff;
+}
+
+body.dark-mode #contact form button {
+    background-color: #66b3ff;
+    color: #222;
+}
+
+body.dark-mode #contact form button:hover {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-left: 0;
+    background-color: #000000;
+    border-radius: 14px;
+    color: #fff;
+}
+
+body.dark-mode footer {
+    background-color: #000000;
+}
+
+/* General Styling */
+h1,
+h2,
+h3 {
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+a {
+    color: #66b3ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #333;
+}
+
+body.dark-mode a {
+    color: #80cfff;
+}
+
+body.dark-mode a:hover {
+    color: #ddd;
+}
+  .social-icons {
+            margin-top: 25px;
+            align: center;
+        }
+
+        .social-icons a {
+        text-align: center;
+    display: inline-block;
+    margin: 1px;
+    width: 60px; /* Increase icon size */
+    height: 60px;
+    align: center;
+    align-items: center; /* Vertically center the items */
+    margin-left: 0;
+    margin-right: 0;
+    color: black;
+}
+
+.social-icons img {
+    align: center;
+    width: 40px; /* Increase size */
+    height: 40px;
+    align-items: center; /* Vertically center the items */
+    opacity: 0.8; /* Slight transparency */
+    border-radius: 15px;
+    margin: 0 30px;
+    transition: transform 0.3s ease;
+    backdrop-filter: blur(10px);
+    color: #c595ff;
+    opacity: 0.9;
+    animation: bounce 2s infinite ease-in-out; /* Bouncing animation */
+}
+.port img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 0.5rem;
+    margin-top: 0;
+}
+
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+    display: none; /* Hidden by default */
+    z-index: 99; /* Below the sidebar */
+}
+
+.menu-icon {
+  position: fixed; /* Keep it in the corner */
+  top: 20px;       /* Adjust position as needed */
+  left: 20px;
+  z-index: 101;   /* Above overlay and sidebar */
+  cursor: pointer;
+  text-align: left;
+  justify-content: left;
+  font-size: 37px;
+}
+
+
+
+
+
+
+
+.sidebar {
+    /* ... other styles ... */
+    right: -400px;  /* Initially hidden */
+    transition: right 0.3s ease; /* Smooth animation */
+    width: 300px; /* Adjust as needed */
+    position: fixed;  /* Important! */
+    top: 0;
+    height: 100%;
+    background-color: white;  /* Or your desired background */
+    z-index: 100;  /* Make sure it's on top of other elements */
+}
+
+/* Styles for the menu items */
+#sidebar nav ul li a {
+    display: block; /* Make the entire <a> area clickable */
+    padding: 10px;
+    text-decoration: none;
+    color: #333; /* Or your desired text color */
+    transition: background-color 0.2s ease; /* Smooth hover effect */
+}
+
+#sidebar nav ul li a:hover {
+    background-color: #f0f0f0; /* Light grey hover color */
+}
+
+/* Basic icon styling */
+#sidebar nav ul li a i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 1.2em;
+}
+
+/* Animation Styles */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.highlighted {
+  background-color: yellow; /* Or your highlight color */
+}
+
+.vibrate {
+    animation: vibrate 0.2s linear infinite;
+}
+
+
+
+
+
+
+.close-button {
+    text-align: left;
+    padding: 10px;
+    height: 40px;
+}
+
+
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  right: -500px; /* Hidden initially */
+  width: 250px;
+  height: 100%;
+  background-color: #ffffff;
+  color: #333;
+  padding: 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+body.dark-mode .sidebar{
+    background-color: #222;
+    color: white;
+}
+
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+
+body.dark-mode #sidebar ul{
+    background-color: #222;
+    color: white;
+}
+
+.sidebar ul li {
+  margin: 20px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+}
+body.dark-mode #sidebar ul a{
+    background-color: #222;
+    color: white;
+}
+
+#sidebar nav ul li a i {
+    margin-right: 5px; /* Space between icon and text */
+    font-size: 1.2em;
+}
+
+body.dark-mode #sidebar ul li a i {
+    background-color: #222;
+    color: white;
+}
+
+
+
+
+/* Animation Styles */
+.blink {
+    animation: blinker 1s linear infinite;
+}
+
+.highlighted {
+  background-color: yellow; /* Or your highlight color */
+}
+
+.vibrate {
+    animation: vibrate 0.2s linear infinite;
+}
+
+/*Portfolio*/
+.portfolio {
+    animation: spin 1s linear 1; /* The "1" means it only runs once */
+}
+
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
+
+@keyframes vibrate {
+    0% { transform: translate(0); }
+    25% { transform: translate(2px, -2px); }
+    50% { transform: translate(-2px, 2px); }
+    75% { transform: translate(2px, 2px); }
+    100% { transform: translate(0); }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+
+.scroll-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.scroll-up.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+
+
+
+  .scene {
+    width: 150px;
+    height: 150px;
+    perspective: 1000px;
+  }
+
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+  }
+
+  .cube div {
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .front  { transform: rotateY(0deg) translateZ(75px); background-image: url('html.png'); }
+  .back   { transform: rotateY(180deg) translateZ(75px); background-image: url('css.png'); }
+  .right  { transform: rotateY(90deg) translateZ(75px); background-image: url('js.png'); }
+  .left   { transform: rotateY(-90deg) translateZ(75px); background-image: url('php.png'); }
+  .top    { transform: rotateX(90deg) translateZ(75px); background-image: url('py.png'); }
+  .bottom { transform: rotateX(-90deg) translateZ(75px); background-image: url('sql.png'); }
